@@ -1,0 +1,10 @@
+---
+- name: Update package cache
+  hosts: hosts
+  become: yes  # Run tasks with sudo privileges
+
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 68000
